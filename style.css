@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  padding: 2vh;
+}
+
+section {
+  flex: 3.33;
+
+  height: 96vh;
+
+  background-color: gold;
+  border: 2px solid black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sec-1 {
+  background-color: gold;
+  animation: blink 3s linear infinite;
+}
+
+#sec-2 {
+  background-color: white;
+}
+
+#sec-3 {
+  background-color: blue;
+}
+h1 {
+  font-weight: bolder;
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+#two {
+  animation: rotating 2s linear infinite;
+}
+
+#three {
+  animation: up-and-down 4s linear infinite;
+}
+
+@keyframes rotating {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes up-and-down {
+  0% {
+    transform: translateY(0);
+  }
+  33.33% {
+    transform: translateY(-300px);
+  }
+  66.66% {
+    transform: translateY(300px);
+  }
+}
+
+@keyframes blink {
+  50% {
+    background-color: blue;
+    color: white;
+  }
+
+  100% {
+    background-color: gold;
+    color: black;
+  }
+}
